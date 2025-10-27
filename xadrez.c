@@ -1,55 +1,29 @@
 #include <stdio.h>
 
 int main() {
-    // ==============================
-    // Simulação de Movimentação das Peças de Xadrez
-    // Torre -> usa for
-    // Bispo -> usa while
-    // Rainha -> usa do-while
-    // ==============================
+    // Quantidade de casas que o Cavalo deve se mover
+    int movimentosBaixo = 2;     // Duas casas para baixo
+    int movimentosEsquerda = 1;  // Uma casa para a esquerda
+    
+    // --- Movimento do Cavalo ---
+    printf("\nMovimento do Cavalo:\n");
 
-    // ------------------------------
-    // Movimento da Torre
-    // ------------------------------
-    int casasTorre = 5;
-    printf("Movimento da TORRE:\n");
-
-    // Torre anda 5 casas para a direita
-    for (int i = 1; i <= casasTorre; i++) {
-        printf("Direita (%d casa)\n", i);
+    // Primeiro, o cavalo move duas casas para baixo
+    for (int i = 0; i < movimentosBaixo; i++) {
+        printf("Baixo\n");
     }
 
-    printf("\n"); // linha em branco para separar as peças
-
-    // ------------------------------
-    // Movimento do Bispo
-    // ------------------------------
-    int casasBispo = 5;
-    int contadorBispo = 1;
-    printf("Movimento do BISPO:\n");
-
-    // Bispo anda 5 casas na diagonal superior direita
-    while (contadorBispo <= casasBispo) {
-        printf("Cima, Direita (%d casa)\n", contadorBispo);
-        contadorBispo++;
+    // Depois, move uma casa para a esquerda
+    int j = 0;
+    while (j < movimentosEsquerda) {
+        printf("Esquerda\n");
+        j++;
     }
 
-    printf("\n"); // separador
-
-    // ------------------------------
-    // Movimento da Rainha
-    // ------------------------------
-    int casasRainha = 8;
-    int contadorRainha = 1;
-    printf("Movimento da RAINHA:\n");
-
-    // Rainha anda 8 casas para a esquerda
-    do {
-        printf("Esquerda (%d casa)\n", contadorRainha);
-        contadorRainha++;
-    } while (contadorRainha <= casasRainha);
-
-    printf("\nSimulação finalizada!\n");
+    // --- Explicação do movimento em L ---
+    // O cavalo move-se 2 casas em uma direção (vertical)
+    // e 1 casa em outra direção perpendicular (horizontal)
+    // formando o movimento em "L".
 
     return 0;
 }
